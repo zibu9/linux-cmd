@@ -1,24 +1,27 @@
-# linux-cmd
-all linux cmd memo
+# Linux Command Memo
+
+## Edit Cart
+
+### Ubuntu / Debian
+
+To list network configurations:
+
+```bash
+sudo netplan list
+    or
+ip a
+
+Next, edit the network configuration file:
+
+```bash
+sudo nano /etc/netplan/filename.yaml
 
 
-## Edit cart 
+Add the following content to filename.yaml:
 
-    ### Ubuntu / Debian
 
-    ``batch
-      sudo netplan list
-    ``
-
-    or 
-    ``batch
-      ip a
-    ``
-Next 
-    
-    ``batch
-      sudo nano /etc/netplan/filename.yaml
-      network:
+```bash
+network:
   version: 2
   ethernets:
     enp0s25:  # Replace enp0s25 with your interface name
@@ -27,8 +30,11 @@ Next
       gateway4: 192.168.1.1
       nameservers:
         addresses: [8.8.8.8, 8.8.4.4]
+```
 
-        sudo netplan apply
+apply changes
+
+```bash
+sudo netplan apply
 
 
-    ``
