@@ -21,16 +21,15 @@ Add the following content to filename.yaml:
 
 
 ```bash
-network:
-  version: 2
-  ethernets:
-    enp0s25:  # Replace enp0s25 with your interface name
-      dhcp4: no
-      addresses: [192.168.1.2/24]
-      gateway4: 192.168.1.1
-      nameservers:
-        addresses: [8.8.8.8, 8.8.4.4]
-```
+    network:
+      version: 2
+      ethernets:
+        enp0s25:  # Replace enp0s25 with your interface name
+          dhcp4: no
+          addresses: [192.168.1.2/24]
+          gateway4: 192.168.1.1
+          nameservers:
+            addresses: [8.8.8.8, 8.8.4.4]
 
 apply changes
 
