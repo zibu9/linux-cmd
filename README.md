@@ -6,17 +6,17 @@ all linux cmd memo
 
     ### Ubuntu / Debian
 
-    ```batch
+    ``batch
       sudo netplan list
-    ```
+    ``
 
     or 
-    ```batch
+    ``batch
       ip a
-    ```
+    ``
 Next 
     
-    ```batch
+    ``batch
       sudo nano /etc/netplan/filename.yaml
       network:
   version: 2
@@ -31,4 +31,4 @@ Next
         sudo netplan apply
 
 
-    ```
+    ``
