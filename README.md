@@ -1,6 +1,6 @@
 # Linux Command Memo
 
-## Edit Cart
+## Edit Interfaces
 
 ### Ubuntu / Debian
 
@@ -8,14 +8,17 @@ To list network configurations:
 
 ```bash
 sudo netplan list
+```
     or
+```bash
 ip a
+```
 
 Next, edit the network configuration file:
 
 ```bash
 sudo nano /etc/netplan/filename.yaml
-
+```
 
 Add the following content to filename.yaml:
 
@@ -30,10 +33,12 @@ Add the following content to filename.yaml:
           gateway4: 192.168.1.1
           nameservers:
             addresses: [8.8.8.8, 8.8.4.4]
+```
 
 apply changes
 
 ```bash
 sudo netplan apply
+```
 
 
